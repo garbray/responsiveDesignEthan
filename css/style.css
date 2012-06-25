@@ -1,0 +1,493 @@
+/*****************
+RESET
+******************/
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/***************************
+self clearing floats 
+****************************/
+
+.mod:after, .section:after {
+	content:".";
+	display:block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.mod, .section {
+	zoom: 1;
+}
+
+/***************************
+Base styles
+****************************/
+
+body {
+	background: #CECECE url(../img/body.gif);
+	color: #303030;
+	font: normal 100%/1.5 Calabri, Candara, "Gill Sans MT", sans-serif;
+}
+
+table {
+	font-size: inherit;
+	font: 100%;
+}
+
+select, input, textarea {
+	font: 99% sans-serif;
+}
+
+a {
+	-moz-transition: color 0.3s linear;
+	-o-transition: color 0.3s linear;
+	-webkit-transition: color 0.3s linear;
+	transition: color 0.3s linear;
+	color: #D52A2A;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #B52A2A;
+}
+
+input.text, input[type=text] textarea {
+	border: 1px solid #7C7C7C;
+	border-color: #7C7C7C #7C7C7C #C3C3C3 #C3C3C3;
+}
+
+p, ul, ol {
+	margin-bottom:1em;
+}
+
+abbr[title], dfn[title]{
+	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted rgba(0,0,0,0.2);
+
+}
+
+hr, .skip, .ineffable {
+	left: -100em;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 0;
+}
+
+/***************************
+main
+****************************/
+
+.logo, .nav-primary, .lede {
+	position: relative;
+	z-index: 100;
+}
+
+.logo:after, .nav-primary:after, .lede:after {
+	content: ".";
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+img {
+	max-width:100%;
+}
+
+.ie6 img {
+	width: 100%;
+}
+
+#page {
+	margin: 36px auto;
+	width: 90%;
+}
+
+.logo {
+	background: #C52618 url(../img/logo-bg.gif);
+	float:left;
+	width: 16.875%; /* 162 / 960 */
+}
+
+.logo:after {
+	box-shadow: -1px 1px 0 #DA2F1E,
+				-2px 2px 0 #DA2F1E,
+				-3px 3px 0 #DA2F1E,
+				-4px 4px 0 #DA2F1E,
+				-5px 5px 0 #DA2F1E,
+				-6px 6px 0 #DA2F1E,
+				-7px 7px 0 #DA2F1E,
+				-8px 8px 0 #DA2F1E,
+				-9px 9px 0 #DA2F1E,
+				-10px 10px 0 #DA2F1E,
+				-11px 11px 0 #DA2F1E;
+	opacity: 0.5;
+}
+
+.logo a {
+	display: block;
+	padding: 8px 14.8148148% 18px; /* 24 / 162 */
+}
+
+.logo img {
+	display: block;
+}
+
+.nav-primary{
+	background: #5E140D url(../img/nav-bg.jpg);
+	font: bold 14px "pill-gothic-300mg-1","pill-gothic-300mg-2", Calabri, Candara,"Gill Sans", "Gill Sans MT", sans-serif;
+	padding: 1.2em 1em 1em;
+	text-transform:uppercase;
+	top: 24px;
+	z-index:99;
+}
+
+.nav-primary:after, .lede:after {
+	box-shadow: 1px -1px 0 #751910,
+				2px -2px 0 #751910,
+				3px -3px 0 #751910,
+				4px -4px 0 #751910,
+				5px -5px 0 #751910,
+				6px -6px 0 #751910,
+				7px -7px 0 #751910,
+				8px -8px 0 #751910,
+				9px -9px 0 #751910,
+				10px -10px 0 #751910,
+				11px -11px 0 #751910;
+	opacity: 0.2;
+}
+
+.nav-primary li {
+	display: inline;
+}
+
+.nav-primary a {
+	color: #EECBA5;
+	padding: 1.2em 1em 1em;
+	position: relative;
+}
+
+.nav-primary a:hover{
+	color: #F8F5F2;
+}
+
+.welcome, .gallery {
+	background: #F8F5F2 url(../img/noise.gif);
+}
+
+.welcome {
+	clear: both;
+	margin: 0 15.625% 53px;/* 150 / 960 */
+}
+
+.slides {
+	position: relative;
+	width:112.272727%;
+}
+
+.slides .figure {
+	position: relative;
+}
+
+.slides .alt {
+	display: none;
+}
+
+.slides .figure b {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.slides .figure b img {
+	display: block;
+	max-width: inherit;
+}
+
+.slides .figcaption {
+	position: absolute;
+	bottom: -2em;
+	right:12.5506073%;
+	width:20.242915%;
+}
+
+.slides p {
+	margin: 0;
+}
+
+.slides .label {
+	bottom:30%;
+	margin: 0px;
+	position: absolute;
+	right: 75.4545455%;
+	text-align:right;
+	width: 22.7272727%;
+}
+
+.copy {
+	color: #B0B0AE;
+	font-size: 12px;
+	line-height: 13px;
+	padding-top: 1em;
+	text-align: right;
+}
+
+.slide-nav {
+	background: #E1A168;
+	border-radius: 3px;
+	box-shadow:0 1px 0 rgba(0,0,0,0.26);
+	left: -15px;
+	margin-top: -20px;
+	position: absolute;
+	width: 40px;
+	top: 50%;
+}
+
+.slide-nav a {
+	background:url(../img/arrow-left.gif) no-repeat 50% 50%;
+	display: block;
+	float: left;
+	height: 40px;
+	width: 20px;
+	overflow: hidden;
+	text-indent:-1000em;
+}
+.slide-nav a:hover {
+	background-position: 50% 48%;
+}
+
+a.disabled {
+	cursor: default;
+	opacity: 0.5;
+}
+
+a.disabled:hover {
+	background-position: 50% 50%;
+}
+
+a.next {
+	background: url(../img/arrow-right.gif) no-repeat 50% 50%;
+}
+
+a.next:hover {
+	background-position: 25% 48%;
+}
+
+a.next.disabled:hover {
+	background-position: 25% 50%;
+}
+
+.welcome .main {
+	clear: left;
+	padding-bottom: 12px;
+	position: relative;
+	margin-top: -15px;
+}
+
+.main-title {
+	background: #000;
+	border-left: 12px;
+	color: #FFF;
+	font: normal 3.625em/0.9 "league-gothic-1", "league-gothic-2", "League Gothic", "Arial Narrow", Arial, sans-serif;	/* 58/16 */
+	margin-left: -12px;
+	margin-bottom:0.1em;
+	padding: 12px 2.4691358% 6px;/* 12 / 660 */
+	text-transform: uppercase;
+}
+
+.welcome .main p {
+	padding-left:2.4691358%; /* 12 / 660 */
+	padding-right:2.4691358%; /* 12 / 660 */
+}
+
+.welcome cite {
+	font-style:normal;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.welcome p.last {
+	margin-bottom: 0;
+}
+
+.blog, .gallery {
+	margin: 0 auto 53px;
+	width: 93.75%; /* 900/960 */
+}
+
+.blog {
+	background: #F8F5F2 url(../img/blog-bg.png) repeat-y 63.1111111111111% 0; /* 568/900 */
+}
+
+.lede {
+	background: #751910 url(../img/blog-title-bg.jpg);
+	color: #F9E3CC;
+	font: normal 1.25em "league-gothic-1", "league-gothic-2", "League Gothic", "Arial Narrow", Arial, sans-serif;	/* 20px / 16px */
+	padding: 0.8em 5.33333333% ; /* 16px / 20px; 48px / 900px */
+	text-transform: uppercase;
+}
+
+.lede a {
+	color: #F8F5F2;
+	font-size: 2em;
+	position: relative;
+	z-index: 1;
+}
+
+.blog .main {
+	float: left;
+	width: 62.8888889%; /* 566px / 900px */
+}
+
+.blog .article {
+	font-size: 0.875em; /* 14px / 16px */
+	padding: 40px 8.48056537%; /* 48px / 566px */
+}
+
+.date {
+	background: rgba(0,0,0,0.6);
+	border-radius: 3px;
+	color: #FFF;
+	float: left;
+	font: normal 0.857142857em/1 "league-gothic-1", "league-gothic-2", "League Gothic", "Arial Narrow", Arial, sans-serif;	/* 12px / 14px */
+	letter-spacing:0.075em;
+	margin: -2.25em 0 0 -17.0886076%;		/* 81/474 */
+	padding: 0.75em 0;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 1px 0 #000;
+	width: 14.556962%;				/* 69px / 474px */
+}
+
+.date span {
+	display: block;
+	font-size: 3.83333333em;
+}
+
+.title {
+	font: bold 1.07142857em "pill-gothic-600mg-1", "pill-gothic-600mg-2", Calibri, Candara, "Gill Sans", "Gill Sans MT", sans-serif;		/* 15px / 14px */
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+
+.intro {
+	font-size: 1.14285714em;		/* 16/14 */
+}
+
+blockquote, .blog .figure {
+	float: right;
+	margin-bottom: 0.5em;
+	margin-left:2.53164557%; /* 12px / 474px */
+	width:48.7341772%;   /* 231px / 474px */
+}
+
+blockquote {
+	border-width:1px 0;
+	border: 1px solid #AAA;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	color: #B65600;
+	font: italic 1.21428571em/1.35294118 Georgia, Times, serif;	/* 17px / 14px; 23px / 17px */
+	padding: 1.1em 0 0.1em;
+}
+
+.blog .figure {
+	background: #720000;
+	color: #EEE;
+	border-radius: 4px;
+	text-decoration:none;
+}
+.blog .figure p {
+	padding: 0.5em;
+	margin: 0;
+}
+
+.meta {
+	border-top: 1px solid #999;
+	padding: 1em 0;
+	color: #666;
+	text-align: right;
+}
+
+.meta h1, .meta h2 {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.meta h1 {
+	margin-bottom: 0.5em;
+}
+
+.meta h2, .meta ul, .meta li {
+	display: inline;
+}
+
+.meta cite {
+	margin-right:0.5em;
+}
+
+.meta li:after {
+	content: "\20\2022";
+	color: #AAA;
+}
+
+.meta li:last-child:after {
+	content:"";
+}
+
